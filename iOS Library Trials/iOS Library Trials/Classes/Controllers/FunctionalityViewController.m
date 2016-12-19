@@ -24,7 +24,7 @@
     // What to show in the table
     self.functionalityArray = [[NSMutableArray alloc] init];
     [self.functionalityArray addObject:@"Display a Webpage in a Webview"];
-    [self.functionalityArray addObject:@"Braintree Payment Gateway"];
+    [self.functionalityArray addObject:@"Braintree Payment Gateway (Drop-In) [iOS 9.0]"];
 }
 
 
