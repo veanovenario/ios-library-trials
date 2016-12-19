@@ -18,6 +18,12 @@
 // Storyboard Names
 #define kStoryboardSplash                               @"Splash"
 #define kStoryboardHome                                 @"Home"
+#define kStoryboardFunctionality                        @"Functionality"
+#define kStoryboardUserInterface                        @"UserInterface"
+
+// Segue Names
+#define kSegueWebView                                   @"showWebpage"
+#define kSegueBraintree                                 @"showBraintree"
 
 @interface Constants : NSObject
 
