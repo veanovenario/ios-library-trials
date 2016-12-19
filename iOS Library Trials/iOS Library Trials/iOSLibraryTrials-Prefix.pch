@@ -1,0 +1,17 @@
+//
+//  iOSLibraryTrials-Prefix.pch
+//  iOS Library Trials
+//
+//  Created by Vea Novenario on 19/12/2016.
+//  Copyright © 2016 Vea Novenario. All rights reserved.
+//
+
+#ifndef iOSLibraryTrials_Prefix_pch
+#define iOSLibraryTrials_Prefix_pch
+
+#import "BaseViewController.h"
+#import "Constants.h"
+#import "Utils.h"
+#import "GlobalVariables.h"
+
+#endif
