@@ -3,6 +3,10 @@
 
 target 'iOS Library Trials' do
 
+# Functionalities
 pod 'BraintreeDropIn'
+
+# User Interface
+pod 'SVProgressHUD'
 
 end

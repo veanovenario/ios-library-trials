@@ -7,6 +7,7 @@
 //
 
 #import "FunctionalityViewController.h"
+#import "WebViewController.h"
 
 @interface FunctionalityViewController ()
 
@@ -60,12 +61,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:kSegueWebView sender:nil];
+        NSString *webviewURL = @"http://google.com";
+        [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
     }else if (indexPath.row == 1) {
         [self performSegueWithIdentifier:kSegueBraintree sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:kSegueWebView]) {
+        NSString *urlString = (NSString *)sender;
+        WebViewController *nextVC = (WebViewController *) segue.destinationViewController;
+        nextVC.url = urlString;
+    }
 }
 
 @end

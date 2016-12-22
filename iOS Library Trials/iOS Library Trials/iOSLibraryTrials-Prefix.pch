@@ -13,5 +13,6 @@
 #import "Constants.h"
 #import "Utils.h"
 #import "GlobalVariables.h"
+#import "SVProgressHUD.h"
 
 #endif

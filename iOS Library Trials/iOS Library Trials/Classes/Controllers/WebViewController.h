@@ -1,13 +1,15 @@
 //
 //  WebViewController.h
-//  iOS Library Trials
+//  GitExperimentation
 //
-//  Created by Vea Novenario on 19/12/2016.
+//  Created by Vea Novenario on 19/04/2016.
 //  Copyright © 2016 Vea Novenario. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface WebViewController : BaseViewController
+@interface WebViewController : UIViewController
+
+@property (strong, nonatomic) NSString *url;
 
 @end

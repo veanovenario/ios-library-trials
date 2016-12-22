@@ -13,14 +13,17 @@ PODS:
     - Braintree/UnionPay (~> 4.0)
     - BraintreeDropIn/UIKit
   - BraintreeDropIn/UIKit (5.0.1)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - BraintreeDropIn
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Braintree: 3eee856da5d30357a55439283b4bb3dbaddcaa7c
   BraintreeDropIn: c271f42485e5a62232fe471f854bbf1003ad95d1
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 6a551268b1ede39498af06b41c03770d4905b38a
+PODFILE CHECKSUM: 1737a09508412f86dddb87684ac712b4cfb1d0b4
 
 COCOAPODS: 1.0.0

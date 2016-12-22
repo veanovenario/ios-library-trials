@@ -1,8 +1,8 @@
 //
 //  WebViewController.m
-//  iOS Library Trials
+//  GitExperimentation
 //
-//  Created by Vea Novenario on 19/12/2016.
+//  Created by Vea Novenario on 19/04/2016.
 //  Copyright © 2016 Vea Novenario. All rights reserved.
 //
 
@@ -10,12 +10,46 @@
 
 @interface WebViewController ()
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end
 
 @implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    
+    if ([self.url length] > 0) {
+        [[self webView] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    if (self.url && [self.url length] > 0 && [self.webView isLoading]) {
+        [self.webView stopLoading];
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - UIWebView Delegate
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    [SVProgressHUD show];
+    
+    return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)paramwebView {
+    
+    [SVProgressHUD dismiss];
 }
 
 @end
