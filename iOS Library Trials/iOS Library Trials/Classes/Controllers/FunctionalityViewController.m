@@ -26,6 +26,7 @@
     self.functionalityArray = [[NSMutableArray alloc] init];
     [self.functionalityArray addObject:@"Display a Webpage in a Webview"];
     [self.functionalityArray addObject:@"Braintree Payment Gateway (Drop-In) [iOS 9.0]"];
+    [self.functionalityArray addObject:@"Open a Screen from a Webview Link"];
 }
 
 
@@ -65,6 +66,8 @@
         [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
     }else if (indexPath.row == 1) {
         [self performSegueWithIdentifier:kSegueBraintree sender:nil];
+    }else if (indexPath.row == 2) {
+        [self performSegueWithIdentifier:kSegueWebpageNativeLink sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -41,16 +41,17 @@
                         <outlet property="tableView" destination="2Sj-Hv-YCH" id="c4N-u7-yt3"/>
                         <segue destination="p8Q-V1-S9T" kind="show" identifier="showBraintree" id="Sld-5o-F3D"/>
                         <segue destination="ahC-0S-g29" kind="show" identifier="showWebpage" id="adV-lQ-dDJ"/>
+                        <segue destination="r0q-dT-eLx" kind="show" identifier="showWebpageNativeLink" id="22H-Iv-QJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQE-tz-j9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="-48"/>
+            <point key="canvasLocation" x="-193" y="412"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="uEf-kx-Nky">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ahC-0S-g29" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" automaticallyAdjustsScrollViewInsets="NO" id="ahC-0S-g29" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q8X-dR-zZP"/>
                         <viewControllerLayoutGuide type="bottom" id="ivb-s3-KIR"/>
@@ -82,6 +83,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBh-zj-S8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="596" y="-360"/>
+        </scene>
+        <!--Web Native Link View Controller-->
+        <scene sceneID="zxb-e0-VAv">
+            <objects>
+                <viewController storyboardIdentifier="WebNativeLinkViewController" automaticallyAdjustsScrollViewInsets="NO" id="r0q-dT-eLx" customClass="WebNativeLinkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D3q-BH-Mlm"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLl-62-Q6o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2o9-4J-JFj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-Gh-4Nc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="r0q-dT-eLx" id="uhd-MF-bAg"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.77647058820000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cLl-62-Q6o" firstAttribute="top" secondItem="nhX-Gh-4Nc" secondAttribute="bottom" id="8Q4-9B-6F7"/>
+                            <constraint firstAttribute="trailing" secondItem="nhX-Gh-4Nc" secondAttribute="trailing" id="CZk-Zp-2ph"/>
+                            <constraint firstItem="nhX-Gh-4Nc" firstAttribute="top" secondItem="D3q-BH-Mlm" secondAttribute="bottom" id="WgZ-sl-eOu"/>
+                            <constraint firstItem="nhX-Gh-4Nc" firstAttribute="leading" secondItem="2o9-4J-JFj" secondAttribute="leading" id="cNY-Kf-RVJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="nhX-Gh-4Nc" id="Krq-7d-zk9"/>
+                        <segue destination="ahC-0S-g29" kind="show" identifier="showWebpage" id="HkH-e0-Bf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jiq-7R-YGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="999"/>
         </scene>
         <!--Braintree View Controller-->
         <scene sceneID="fif-Zt-aaH">
@@ -141,4 +179,7 @@
             <point key="canvasLocation" x="596" y="312.59370314842579"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HkH-e0-Bf1"/>
+    </inferredMetricsTieBreakers>
 </document>

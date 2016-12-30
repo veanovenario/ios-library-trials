@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */; };
+		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
+		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
 		F7C3CE911E07CA3100930812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CE901E07CA3100930812 /* main.m */; };
 		F7C3CE9A1E07CA3100930812 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE981E07CA3100930812 /* Home.storyboard */; };
 		F7C3CE9C1E07CA3100930812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE9B1E07CA3100930812 /* Assets.xcassets */; };
@@ -29,6 +31,9 @@
 		0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Library Trials.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FEDF980A532DA2A7A0B287 /* Pods-iOS Library Trials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.release.xcconfig"; sourceTree = "<group>"; };
 		EF8DE087DD5790F6D2C15509 /* Pods-iOS Library Trials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.debug.xcconfig"; sourceTree = "<group>"; };
+		F78542681E1651AF00A80628 /* WebNativeLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebNativeLinkViewController.h; path = Classes/Controllers/WebNativeLinkViewController.h; sourceTree = "<group>"; };
+		F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebNativeLinkViewController.m; path = Classes/Controllers/WebNativeLinkViewController.m; sourceTree = "<group>"; };
+		F785426C1E16536900A80628 /* WebpageNativeLink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WebpageNativeLink.html; path = Resources/HTMLs/WebpageNativeLink.html; sourceTree = "<group>"; };
 		F7C3CE8C1E07CA3100930812 /* iOS Library Trials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Library Trials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C3CE901E07CA3100930812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7C3CE991E07CA3100930812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -86,6 +91,23 @@
 				D7FEDF980A532DA2A7A0B287 /* Pods-iOS Library Trials.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F78542671E16503900A80628 /* WebpageNativeLink */ = {
+			isa = PBXGroup;
+			children = (
+				F78542681E1651AF00A80628 /* WebNativeLinkViewController.h */,
+				F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */,
+			);
+			name = WebpageNativeLink;
+			sourceTree = "<group>";
+		};
+		F785426B1E16535F00A80628 /* HTMLs */ = {
+			isa = PBXGroup;
+			children = (
+				F785426C1E16536900A80628 /* WebpageNativeLink.html */,
+			);
+			name = HTMLs;
 			sourceTree = "<group>";
 		};
 		F7C3CE831E07CA3100930812 = {
@@ -201,6 +223,7 @@
 		F7C3CEB11E07CED400930812 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F785426B1E16535F00A80628 /* HTMLs */,
 				F7C3CEB21E07CEDE00930812 /* Images */,
 			);
 			name = Resources;
@@ -239,6 +262,7 @@
 				F7C3CED21E07D47000930812 /* FunctionalityViewController.m */,
 				F7C3CED41E07E00000930812 /* WebpageDisplay */,
 				F7C3CEC91E07D38600930812 /* Braintree */,
+				F78542671E16503900A80628 /* WebpageNativeLink */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -338,6 +362,7 @@
 				F7C3CEC71E07D33900930812 /* Functionality.storyboard in Resources */,
 				F7C3CE9F1E07CA3100930812 /* Splash.storyboard in Resources */,
 				F7C3CE9C1E07CA3100930812 /* Assets.xcassets in Resources */,
+				F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */,
 				F7C3CECD1E07D3D100930812 /* UserInterface.storyboard in Resources */,
 				F7C3CE9A1E07CA3100930812 /* Home.storyboard in Resources */,
 			);
@@ -400,6 +425,7 @@
 			files = (
 				F7C3CEC11E07D0F500930812 /* GlobalVariables.m in Sources */,
 				F7C3CED71E07E06300930812 /* WebViewController.m in Sources */,
+				F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */,
 				F7C3CEBE1E07D0A800930812 /* Constants.m in Sources */,
 				F7C3CEA91E07CBEB00930812 /* AppDelegate.m in Sources */,
 				F7C3CEB81E07D01800930812 /* BaseViewController.m in Sources */,

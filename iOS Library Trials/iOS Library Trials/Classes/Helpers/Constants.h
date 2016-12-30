@@ -24,6 +24,7 @@
 // Segue Names
 #define kSegueWebView                                   @"showWebpage"
 #define kSegueBraintree                                 @"showBraintree"
+#define kSegueWebpageNativeLink                         @"showWebpageNativeLink"
 
 @interface Constants : NSObject
 
