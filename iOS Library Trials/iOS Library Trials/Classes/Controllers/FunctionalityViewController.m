@@ -24,11 +24,10 @@
     
     // What to show in the table
     self.functionalityArray = [[NSMutableArray alloc] init];
-    [self.functionalityArray addObject:@"Display a Webpage in a Webview"];
+    [self.functionalityArray addObject:@"Display a webpage in a WebView (to test responsive design)"];
     [self.functionalityArray addObject:@"Braintree Payment Gateway (Drop-In) [iOS 9.0]"];
-    [self.functionalityArray addObject:@"Open a Screen from a Webview Link"];
+    [self.functionalityArray addObject:@"Open a WebView from a link in a webpage"];
 }
-
 
 #pragma mark - TableView DataSource
 

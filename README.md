@@ -1,6 +1,6 @@
 ## About
 
-Library, functionality and user interface trials before implementing on an actual project. 
+Library, functionality, and user interface trials before implementing on an actual project. 
 
 ## Content
 
