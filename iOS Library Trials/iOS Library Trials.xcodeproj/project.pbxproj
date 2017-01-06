@@ -25,6 +25,8 @@
 		F7C3CED01E07D41900930812 /* BraintreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CECF1E07D41900930812 /* BraintreeViewController.m */; };
 		F7C3CED31E07D47000930812 /* FunctionalityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CED21E07D47000930812 /* FunctionalityViewController.m */; };
 		F7C3CED71E07E06300930812 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CED61E07E06300930812 /* WebViewController.m */; };
+		F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */; };
+		F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,10 @@
 		F7C3CED21E07D47000930812 /* FunctionalityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunctionalityViewController.m; path = Classes/Controllers/FunctionalityViewController.m; sourceTree = "<group>"; };
 		F7C3CED51E07E06300930812 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = Classes/Controllers/WebViewController.h; sourceTree = "<group>"; };
 		F7C3CED61E07E06300930812 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = Classes/Controllers/WebViewController.m; sourceTree = "<group>"; };
+		F7D433F51E1E25DA00A7DB2E /* CustomActivityItemProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomActivityItemProvider.h; path = Classes/Controllers/CustomActivityItemProvider.h; sourceTree = "<group>"; };
+		F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomActivityItemProvider.m; path = Classes/Controllers/CustomActivityItemProvider.m; sourceTree = "<group>"; };
+		F7D433F81E1E25F100A7DB2E /* SharePerActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePerActivityViewController.h; path = Classes/Controllers/SharePerActivityViewController.h; sourceTree = "<group>"; };
+		F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharePerActivityViewController.m; path = Classes/Controllers/SharePerActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +269,7 @@
 				F7C3CED41E07E00000930812 /* WebpageDisplay */,
 				F7C3CEC91E07D38600930812 /* Braintree */,
 				F78542671E16503900A80628 /* WebpageNativeLink */,
+				F7D433F11E1E233E00A7DB2E /* SharePerActivityType */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -290,6 +297,17 @@
 				F7C3CED61E07E06300930812 /* WebViewController.m */,
 			);
 			name = WebpageDisplay;
+			sourceTree = "<group>";
+		};
+		F7D433F11E1E233E00A7DB2E /* SharePerActivityType */ = {
+			isa = PBXGroup;
+			children = (
+				F7D433F81E1E25F100A7DB2E /* SharePerActivityViewController.h */,
+				F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */,
+				F7D433F51E1E25DA00A7DB2E /* CustomActivityItemProvider.h */,
+				F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */,
+			);
+			name = SharePerActivityType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,9 +446,11 @@
 				F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */,
 				F7C3CEBE1E07D0A800930812 /* Constants.m in Sources */,
 				F7C3CEA91E07CBEB00930812 /* AppDelegate.m in Sources */,
+				F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */,
 				F7C3CEB81E07D01800930812 /* BaseViewController.m in Sources */,
 				F7C3CED31E07D47000930812 /* FunctionalityViewController.m in Sources */,
 				F7C3CE911E07CA3100930812 /* main.m in Sources */,
+				F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */,
 				F7C3CEC41E07D12600930812 /* Utils.m in Sources */,
 				F7C3CEBB1E07D05800930812 /* HomeViewController.m in Sources */,
 				F7C3CED01E07D41900930812 /* BraintreeViewController.m in Sources */,
