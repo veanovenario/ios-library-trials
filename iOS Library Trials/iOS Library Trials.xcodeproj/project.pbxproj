@@ -10,6 +10,7 @@
 		BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */; };
 		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
 		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
+		F78843F41E262D0400D3476F /* FrameworkUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */; };
 		F7C3CE911E07CA3100930812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CE901E07CA3100930812 /* main.m */; };
 		F7C3CE9A1E07CA3100930812 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE981E07CA3100930812 /* Home.storyboard */; };
 		F7C3CE9C1E07CA3100930812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE9B1E07CA3100930812 /* Assets.xcassets */; };
@@ -29,6 +30,19 @@
 		F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F7A8E1331E2DF0FD0031F9E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Library Trials.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FEDF980A532DA2A7A0B287 /* Pods-iOS Library Trials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.release.xcconfig"; sourceTree = "<group>"; };
@@ -36,6 +50,8 @@
 		F78542681E1651AF00A80628 /* WebNativeLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebNativeLinkViewController.h; path = Classes/Controllers/WebNativeLinkViewController.h; sourceTree = "<group>"; };
 		F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebNativeLinkViewController.m; path = Classes/Controllers/WebNativeLinkViewController.m; sourceTree = "<group>"; };
 		F785426C1E16536900A80628 /* WebpageNativeLink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WebpageNativeLink.html; path = Resources/HTMLs/WebpageNativeLink.html; sourceTree = "<group>"; };
+		F78843F21E262D0400D3476F /* FrameworkUsageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrameworkUsageViewController.h; path = Classes/Controllers/FrameworkUsageViewController.h; sourceTree = "<group>"; };
+		F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FrameworkUsageViewController.m; path = Classes/Controllers/FrameworkUsageViewController.m; sourceTree = "<group>"; };
 		F7C3CE8C1E07CA3100930812 /* iOS Library Trials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Library Trials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C3CE901E07CA3100930812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7C3CE991E07CA3100930812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -116,6 +132,22 @@
 			name = HTMLs;
 			sourceTree = "<group>";
 		};
+		F78843EE1E262C3B00D3476F /* FrameworkUsage */ = {
+			isa = PBXGroup;
+			children = (
+				F78843F21E262D0400D3476F /* FrameworkUsageViewController.h */,
+				F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */,
+			);
+			name = FrameworkUsage;
+			sourceTree = "<group>";
+		};
+		F7A8E12D1E2DEE2A0031F9E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7C3CE831E07CA3100930812 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +198,7 @@
 				F7C3CEAE1E07CC0400930812 /* Libraries */,
 				F7C3CEAD1E07CBFE00930812 /* Models */,
 				F7C3CEAC1E07CBFB00930812 /* Views */,
+				F7A8E12D1E2DEE2A0031F9E2 /* Frameworks */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -270,6 +303,7 @@
 				F7C3CEC91E07D38600930812 /* Braintree */,
 				F78542671E16503900A80628 /* WebpageNativeLink */,
 				F7D433F11E1E233E00A7DB2E /* SharePerActivityType */,
+				F78843EE1E262C3B00D3476F /* FrameworkUsage */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -323,6 +357,7 @@
 				F7C3CE8A1E07CA3100930812 /* Resources */,
 				FD146A22A8F0B69F11566366 /* 📦 Embed Pods Frameworks */,
 				7EF4A27555E452F70D84462C /* 📦 Copy Pods Resources */,
+				F7A8E1331E2DF0FD0031F9E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,6 +481,7 @@
 				F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */,
 				F7C3CEBE1E07D0A800930812 /* Constants.m in Sources */,
 				F7C3CEA91E07CBEB00930812 /* AppDelegate.m in Sources */,
+				F78843F41E262D0400D3476F /* FrameworkUsageViewController.m in Sources */,
 				F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */,
 				F7C3CEB81E07D01800930812 /* BaseViewController.m in Sources */,
 				F7C3CED31E07D47000930812 /* FunctionalityViewController.m in Sources */,
@@ -592,6 +628,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iOS Library Trials/iOS Library Trials.entitlements";
 				DEVELOPMENT_TEAM = TRQW64F727;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS Library Trials/iOSLibraryTrials-Prefix.pch";
 				INFOPLIST_FILE = "iOS Library Trials/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -608,6 +649,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iOS Library Trials/iOS Library Trials.entitlements";
 				DEVELOPMENT_TEAM = TRQW64F727;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS Library Trials/iOSLibraryTrials-Prefix.pch";
 				INFOPLIST_FILE = "iOS Library Trials/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

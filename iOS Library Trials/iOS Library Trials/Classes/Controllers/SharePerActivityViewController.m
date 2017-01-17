@@ -19,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Buttons
+    self.shareButton = [Utils uiButton:self.shareButton];
 }
 
 - (IBAction)shareButtonPressed:(id)sender {

@@ -43,6 +43,7 @@
                         <segue destination="ahC-0S-g29" kind="show" identifier="showWebpage" id="adV-lQ-dDJ"/>
                         <segue destination="r0q-dT-eLx" kind="show" identifier="showWebpageNativeLink" id="22H-Iv-QJf"/>
                         <segue destination="eqE-GD-LkW" kind="show" identifier="showSharePerActivityType" id="mRe-HV-AUs"/>
+                        <segue destination="vPQ-nC-ZtM" kind="show" identifier="showFrameworkUsage" id="6ow-7J-dak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQE-tz-j9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +183,7 @@
         <!--Share Per Activity View Controller-->
         <scene sceneID="apx-4x-PNJ">
             <objects>
-                <viewController id="eqE-GD-LkW" customClass="SharePerActivityViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SharePerActivityViewController" id="eqE-GD-LkW" customClass="SharePerActivityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHF-Uy-APG"/>
                         <viewControllerLayoutGuide type="bottom" id="84A-df-RZN"/>
@@ -220,6 +221,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLK-vM-W8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="596" y="1686"/>
+        </scene>
+        <!--Framework Usage View Controller-->
+        <scene sceneID="D0N-Zc-dNA">
+            <objects>
+                <viewController storyboardIdentifier="FrameworkUsageViewController" id="vPQ-nC-ZtM" customClass="FrameworkUsageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bY5-9b-f64"/>
+                        <viewControllerLayoutGuide type="bottom" id="kLW-NB-Xvz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pXV-RM-314">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiX-0m-jsM" userLabel="Functionality-Guide">
+                                <rect key="frame" x="50" y="309" width="275" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gHu-xu-XSL"/>
+                                </constraints>
+                                <state key="normal" title="Framework 1">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="vPQ-nC-ZtM" eventType="touchUpInside" id="lVv-nM-YF7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sW0-ce-sez" userLabel="Functionality-Guide">
+                                <rect key="frame" x="50" y="379" width="275" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k4m-0w-2nJ"/>
+                                </constraints>
+                                <state key="normal" title="Framework 2">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Pressed:" destination="vPQ-nC-ZtM" eventType="touchUpInside" id="TQa-uB-k3v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.77647058820000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sW0-ce-sez" firstAttribute="leading" secondItem="pXV-RM-314" secondAttribute="leading" constant="50" id="8zT-1y-zDv"/>
+                            <constraint firstItem="ZiX-0m-jsM" firstAttribute="leading" secondItem="pXV-RM-314" secondAttribute="leading" constant="50" id="DCG-ri-t0W"/>
+                            <constraint firstItem="ZiX-0m-jsM" firstAttribute="centerY" secondItem="pXV-RM-314" secondAttribute="centerY" id="Q69-Dd-n0r"/>
+                            <constraint firstItem="sW0-ce-sez" firstAttribute="top" secondItem="ZiX-0m-jsM" secondAttribute="bottom" constant="20" id="Qfr-4p-o6m"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiX-0m-jsM" secondAttribute="trailing" constant="50" id="u1b-t9-xoE"/>
+                            <constraint firstAttribute="trailing" secondItem="sW0-ce-sez" secondAttribute="trailing" constant="50" id="z0m-O1-gLB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frameworkButton1" destination="ZiX-0m-jsM" id="5mW-g8-rwl"/>
+                        <outlet property="frameworkButton2" destination="sW0-ce-sez" id="GV6-h3-8a4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruE-4a-wdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="2392"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

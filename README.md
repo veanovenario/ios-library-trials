@@ -9,5 +9,6 @@ Functionality
 • Braintree Payment Gateway (Drop-In) [iOS 9.0]  
 • Open a WebView from a link in a webpage  
 • Share different data per ActivityType  
+• Display a screen from a created framework  
 
 User Interface  

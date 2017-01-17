@@ -28,6 +28,7 @@
     [self.functionalityArray addObject:@"Braintree Payment Gateway (Drop-In) [iOS 9.0]"];
     [self.functionalityArray addObject:@"Open a WebView from a link in a webpage"];
     [self.functionalityArray addObject:@"Share different data per ActivityType"];
+    [self.functionalityArray addObject:@"Display a screen from a created framework"];
 }
 
 #pragma mark - TableView DataSource
@@ -70,6 +71,8 @@
         [self performSegueWithIdentifier:kSegueWebpageNativeLink sender:nil];
     }else if (indexPath.row == 3) {
         [self performSegueWithIdentifier:kSegueSharePerActivityType sender:nil];
+    }else if (indexPath.row == 4) {
+        [self performSegueWithIdentifier:kSegueFrameworkUsage sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

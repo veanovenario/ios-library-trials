@@ -26,6 +26,7 @@
 #define kSegueBraintree                                 @"showBraintree"
 #define kSegueWebpageNativeLink                         @"showWebpageNativeLink"
 #define kSegueSharePerActivityType                      @"showSharePerActivityType"
+#define kSegueFrameworkUsage                            @"showFrameworkUsage"
 
 @interface Constants : NSObject
 
