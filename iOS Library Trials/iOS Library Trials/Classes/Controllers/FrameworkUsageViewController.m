@@ -7,6 +7,7 @@
 //
 
 #import "FrameworkUsageViewController.h"
+#import <CMBingo/CMBViewController.h>
 
 @interface FrameworkUsageViewController ()
 
@@ -26,11 +27,19 @@
 }
 
 - (IBAction)button1Pressed:(id)sender {
-    
+
 }
 
 - (IBAction)button2Pressed:(id)sender {
     
+    /* NOTES:
+     * Framework should be added in General > Embedded Binaries
+     * Make sure the framework path is correct in Build Settings > Framework Search Paths
+     */
+    
+    // CapitaMall Bingo Framework
+    CMBViewController *cmbVC = [[CMBViewController alloc] initBingo];
+    [self.navigationController pushViewController:cmbVC animated:YES];
 }
 
 @end

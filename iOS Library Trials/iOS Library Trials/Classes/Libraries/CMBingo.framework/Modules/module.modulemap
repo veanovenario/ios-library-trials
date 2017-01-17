@@ -1,0 +1,6 @@
+framework module CMBingo {
+  umbrella header "CMBingo.h"
+
+  export *
+  module * { export * }
+}

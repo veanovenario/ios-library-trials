@@ -11,6 +11,8 @@
 		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
 		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
 		F78843F41E262D0400D3476F /* FrameworkUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */; };
+		F7A8E1611E2E0C250031F9E2 /* CMBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; };
+		F7A8E1631E2E0E140031F9E2 /* CMBingo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7C3CE911E07CA3100930812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CE901E07CA3100930812 /* main.m */; };
 		F7C3CE9A1E07CA3100930812 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE981E07CA3100930812 /* Home.storyboard */; };
 		F7C3CE9C1E07CA3100930812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE9B1E07CA3100930812 /* Assets.xcassets */; };
@@ -37,6 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F7A8E1631E2E0E140031F9E2 /* CMBingo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +55,7 @@
 		F785426C1E16536900A80628 /* WebpageNativeLink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WebpageNativeLink.html; path = Resources/HTMLs/WebpageNativeLink.html; sourceTree = "<group>"; };
 		F78843F21E262D0400D3476F /* FrameworkUsageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrameworkUsageViewController.h; path = Classes/Controllers/FrameworkUsageViewController.h; sourceTree = "<group>"; };
 		F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FrameworkUsageViewController.m; path = Classes/Controllers/FrameworkUsageViewController.m; sourceTree = "<group>"; };
+		F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CMBingo.framework; path = Classes/Libraries/CMBingo.framework; sourceTree = "<group>"; };
 		F7C3CE8C1E07CA3100930812 /* iOS Library Trials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Library Trials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C3CE901E07CA3100930812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7C3CE991E07CA3100930812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A8E1611E2E0C250031F9E2 /* CMBingo.framework in Frameworks */,
 				BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,13 +144,6 @@
 				F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */,
 			);
 			name = FrameworkUsage;
-			sourceTree = "<group>";
-		};
-		F7A8E12D1E2DEE2A0031F9E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F7C3CE831E07CA3100930812 = {
@@ -198,7 +196,6 @@
 				F7C3CEAE1E07CC0400930812 /* Libraries */,
 				F7C3CEAD1E07CBFE00930812 /* Models */,
 				F7C3CEAC1E07CBFB00930812 /* Views */,
-				F7A8E12D1E2DEE2A0031F9E2 /* Frameworks */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -244,6 +241,7 @@
 		F7C3CEAE1E07CC0400930812 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -630,13 +628,13 @@
 				DEVELOPMENT_TEAM = TRQW64F727;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
-					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Classes/Libraries",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS Library Trials/iOSLibraryTrials-Prefix.pch";
 				INFOPLIST_FILE = "iOS Library Trials/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vea.ioslibrarytrials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -651,8 +649,7 @@
 				DEVELOPMENT_TEAM = TRQW64F727;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
-					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Frameworks",
+					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Classes/Libraries",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS Library Trials/iOSLibraryTrials-Prefix.pch";
 				INFOPLIST_FILE = "iOS Library Trials/Info.plist";
