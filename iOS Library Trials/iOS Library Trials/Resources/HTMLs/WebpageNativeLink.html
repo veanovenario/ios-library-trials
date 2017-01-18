@@ -1,5 +1,32 @@
 <center>
-<b>Webpage with links to native actions</b>
+<b>Webpage with href link to native actions</b>
 <br><br>
+
 <a href="nativeaction://showwebpage">Open a WebViewController</a>
+<br><br>
+
+<b>Webpage with onClick to native actions</b>
+<br><br>
+
+<button onclick="google()">Google Button (Doesn't work)</button>
+<br><br>
+
+<a href="nativeaction://google" onclick="return scan()">Google Link</a>
+<br><br>
+
+<script type="text/javascript">
+    
+    function alert1() {
+        alert('Finished loading');
+    }
+
+    function alert2SubmitContent(text) {
+        alert(text);
+    }
+
+    function google() {
+        alert('Google initiated');
+    }
+</script>
+
 </center>

@@ -32,16 +32,44 @@
     NSURL *url = request.URL;
     NSString *urlString = url.absoluteString;
     
-    //Check if special link
-    if ( [ urlString isEqualToString: @"nativeaction://showwebpage" ] ) {
+    // Can also check per scheme and host
+    
+    DLog(@"[Scheme] %@",request.URL.scheme); // ex. nativeaction
+    DLog(@"[Host] %@",request.URL.host); // ex. showwebpage
+
+    // Through href link
+    if ([urlString isEqualToString: @"nativeaction://showwebpage"]) {
+        
         // Present the new view controller
         NSString *webviewURL = @"http://facebook.com";
         [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
         
         return NO;
+    } else if ( [ urlString isEqualToString: @"nativeaction://google" ] ) {
+        
+        // Present the new view controller
+        NSString *webviewURL = @"http://google.com";
+        [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
+        
+        return NO;
     }
-    
+
     return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+
+    // Calling a function from a website's javascript
+    
+    // Normal JS function
+//    NSString * jsCallBack1 = [NSString stringWithFormat:@"facebookPostShared()"];
+//    [webView stringByEvaluatingJavaScriptFromString:jsCallBack1];
+    
+    // JS function with parameter
+    NSString * jsCallBack2 = [NSString stringWithFormat:@"alert2SubmitContent('%@')",@"I am a parameter"];
+    [webView stringByEvaluatingJavaScriptFromString:jsCallBack2];
+
 }
 
 #pragma - Navigation
