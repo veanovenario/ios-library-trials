@@ -7,7 +7,7 @@
 //
 
 #import "FrameworkUsageViewController.h"
-#import <CMBingo/CMBViewController.h>
+#import <CMBingo/CMBWebViewController.h>
 
 @interface FrameworkUsageViewController ()
 
@@ -38,7 +38,7 @@
      */
     
     // CapitaMall Bingo Framework
-    CMBViewController *cmbVC = [[CMBViewController alloc] initBingo];
+    CMBWebViewController *cmbVC = [[CMBWebViewController alloc] initBingo];
     [self.navigationController pushViewController:cmbVC animated:YES];
 }
 

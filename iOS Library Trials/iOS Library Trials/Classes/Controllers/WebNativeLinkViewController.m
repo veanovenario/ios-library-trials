@@ -45,7 +45,7 @@
         [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
         
         return NO;
-    } else if ( [ urlString isEqualToString: @"nativeaction://google" ] ) {
+    } else if ([urlString isEqualToString: @"nativeaction://google"]) {
         
         // Present the new view controller
         NSString *webviewURL = @"http://google.com";

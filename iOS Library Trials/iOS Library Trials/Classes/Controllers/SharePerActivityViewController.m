@@ -33,6 +33,23 @@
     NSArray *activityItems = @[aipCaption, aipImage, aipLink];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    // Exclude activities
+    /*activityController.excludedActivityTypes = @[UIActivityTypePostToTwitter,
+                                                 UIActivityTypePostToWeibo,
+                                                 UIActivityTypeMessage,
+                                                 UIActivityTypeMail,
+                                                 UIActivityTypePrint,
+                                                 UIActivityTypeCopyToPasteboard,
+                                                 UIActivityTypeAssignToContact,
+                                                 UIActivityTypeSaveToCameraRoll,
+                                                 UIActivityTypeAddToReadingList,
+                                                 UIActivityTypePostToFlickr,
+                                                 UIActivityTypePostToVimeo,
+                                                 UIActivityTypePostToTencentWeibo,
+                                                 UIActivityTypeAirDrop,
+                                                 UIActivityTypeOpenInIBooks];*/
+    
     [self presentViewController:activityController animated:YES completion:nil];
 }
 

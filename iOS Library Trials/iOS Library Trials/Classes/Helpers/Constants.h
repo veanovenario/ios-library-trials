@@ -27,6 +27,7 @@
 #define kSegueWebpageNativeLink                         @"showWebpageNativeLink"
 #define kSegueSharePerActivityType                      @"showSharePerActivityType"
 #define kSegueFrameworkUsage                            @"showFrameworkUsage"
+#define kSegueQRCodeScanner                             @"showQRCodeScanner"
 
 @interface Constants : NSObject
 

@@ -30,6 +30,7 @@
 		F7C3CED71E07E06300930812 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CED61E07E06300930812 /* WebViewController.m */; };
 		F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */; };
 		F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */; };
+		F7EF39231E31BF100045E869 /* ZXingQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,8 @@
 		F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomActivityItemProvider.m; path = Classes/Controllers/CustomActivityItemProvider.m; sourceTree = "<group>"; };
 		F7D433F81E1E25F100A7DB2E /* SharePerActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePerActivityViewController.h; path = Classes/Controllers/SharePerActivityViewController.h; sourceTree = "<group>"; };
 		F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharePerActivityViewController.m; path = Classes/Controllers/SharePerActivityViewController.m; sourceTree = "<group>"; };
+		F7EF39211E31BF100045E869 /* ZXingQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZXingQRCodeScannerViewController.h; path = Classes/Controllers/ZXingQRCodeScannerViewController.h; sourceTree = "<group>"; };
+		F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZXingQRCodeScannerViewController.m; path = Classes/Controllers/ZXingQRCodeScannerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,7 @@
 				F78542671E16503900A80628 /* WebpageNativeLink */,
 				F7D433F11E1E233E00A7DB2E /* SharePerActivityType */,
 				F78843EE1E262C3B00D3476F /* FrameworkUsage */,
+				F7EF39201E31BD620045E869 /* ZXingQRCodeScanner */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -340,6 +344,15 @@
 				F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */,
 			);
 			name = SharePerActivityType;
+			sourceTree = "<group>";
+		};
+		F7EF39201E31BD620045E869 /* ZXingQRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				F7EF39211E31BF100045E869 /* ZXingQRCodeScannerViewController.h */,
+				F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */,
+			);
+			name = ZXingQRCodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +500,7 @@
 				F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */,
 				F7C3CEC41E07D12600930812 /* Utils.m in Sources */,
 				F7C3CEBB1E07D05800930812 /* HomeViewController.m in Sources */,
+				F7EF39231E31BF100045E869 /* ZXingQRCodeScannerViewController.m in Sources */,
 				F7C3CED01E07D41900930812 /* BraintreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

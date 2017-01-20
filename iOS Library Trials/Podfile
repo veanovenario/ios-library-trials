@@ -5,6 +5,7 @@ target 'iOS Library Trials' do
 
 # Functionalities
 pod 'BraintreeDropIn'
+pod 'ZXingObjC', '~> 3.0'
 
 # User Interface
 pod 'SVProgressHUD'

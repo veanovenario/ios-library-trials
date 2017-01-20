@@ -26,9 +26,10 @@
     self.functionalityArray = [[NSMutableArray alloc] init];
     [self.functionalityArray addObject:@"Display a webpage in a WebView (to test responsive design)"];
     [self.functionalityArray addObject:@"Braintree Payment Gateway (Drop-In) [iOS 9.0]"];
-    [self.functionalityArray addObject:@"Open a WebView from a link in a webpage"];
+    [self.functionalityArray addObject:@"Open a WebView from a link in a webpage & call a JS function"];
     [self.functionalityArray addObject:@"Share different data per ActivityType"];
     [self.functionalityArray addObject:@"Display a screen from a created framework"];
+    [self.functionalityArray addObject:@"ZXing QR Code Scanner"];
 }
 
 #pragma mark - TableView DataSource
@@ -73,6 +74,8 @@
         [self performSegueWithIdentifier:kSegueSharePerActivityType sender:nil];
     }else if (indexPath.row == 4) {
         [self performSegueWithIdentifier:kSegueFrameworkUsage sender:nil];
+    }else if (indexPath.row == 5) {
+        [self performSegueWithIdentifier:kSegueQRCodeScanner sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

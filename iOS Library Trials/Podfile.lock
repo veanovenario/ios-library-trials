@@ -14,16 +14,21 @@ PODS:
     - BraintreeDropIn/UIKit
   - BraintreeDropIn/UIKit (5.0.1)
   - SVProgressHUD (2.1.2)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
   - BraintreeDropIn
   - SVProgressHUD
+  - ZXingObjC (~> 3.0)
 
 SPEC CHECKSUMS:
   Braintree: 3eee856da5d30357a55439283b4bb3dbaddcaa7c
   BraintreeDropIn: c271f42485e5a62232fe471f854bbf1003ad95d1
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 1737a09508412f86dddb87684ac712b4cfb1d0b4
+PODFILE CHECKSUM: 064e34f7ea0db57ae0c7566c44d415e5f80f9bc5
 
 COCOAPODS: 1.0.0
