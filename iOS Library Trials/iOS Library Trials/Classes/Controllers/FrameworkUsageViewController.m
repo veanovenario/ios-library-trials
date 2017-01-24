@@ -39,6 +39,7 @@
     
     // CapitaMall Bingo Framework
     CMBWebViewController *cmbVC = [[CMBWebViewController alloc] initBingo];
+    [cmbVC setURL:@"https://bingo.massiveinfinity.com/apiv1/Service/serve_bingo_board?user_id=1"];
     [self.navigationController pushViewController:cmbVC animated:YES];
 }
 

@@ -11,8 +11,6 @@
 		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
 		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
 		F78843F41E262D0400D3476F /* FrameworkUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78843F31E262D0400D3476F /* FrameworkUsageViewController.m */; };
-		F7A8E1611E2E0C250031F9E2 /* CMBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; };
-		F7A8E1631E2E0E140031F9E2 /* CMBingo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7C3CE911E07CA3100930812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3CE901E07CA3100930812 /* main.m */; };
 		F7C3CE9A1E07CA3100930812 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE981E07CA3100930812 /* Home.storyboard */; };
 		F7C3CE9C1E07CA3100930812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C3CE9B1E07CA3100930812 /* Assets.xcassets */; };
@@ -31,16 +29,18 @@
 		F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F61E1E25DA00A7DB2E /* CustomActivityItemProvider.m */; };
 		F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */; };
 		F7EF39231E31BF100045E869 /* ZXingQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */; };
+		F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; };
+		F7EF39281E31F8CD0045E869 /* CMBingo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F7A8E1331E2DF0FD0031F9E2 /* Embed Frameworks */ = {
+		F7EF39291E31F8CD0045E869 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7A8E1631E2E0E140031F9E2 /* CMBingo.framework in Embed Frameworks */,
+				F7EF39281E31F8CD0045E869 /* CMBingo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A8E1611E2E0C250031F9E2 /* CMBingo.framework in Frameworks */,
+				F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */,
 				BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +368,7 @@
 				F7C3CE8A1E07CA3100930812 /* Resources */,
 				FD146A22A8F0B69F11566366 /* 📦 Embed Pods Frameworks */,
 				7EF4A27555E452F70D84462C /* 📦 Copy Pods Resources */,
-				F7A8E1331E2DF0FD0031F9E2 /* Embed Frameworks */,
+				F7EF39291E31F8CD0045E869 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

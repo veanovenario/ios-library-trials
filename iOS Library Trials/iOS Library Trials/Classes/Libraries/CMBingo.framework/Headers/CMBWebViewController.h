@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMBScannerViewController.h"
 
-@interface CMBWebViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CMBWebViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CMBScannerViewControllerDelegate>
+
+@property (nonatomic, strong, readonly) CMBScannerViewController *scannerViewController;
 
 // Init
 -(id)initBingo;
+-(void)setURL:(NSString *)bingoURL;
 
 @end
