@@ -13,8 +13,18 @@
 
 @property (nonatomic, strong, readonly) CMBScannerViewController *scannerViewController;
 
-// Init
+/*!
+ * @brief Initialize CMBWebViewController which uses a web view to display the bingo game.
+ * @return CMBWebViewController for initialization.
+ */
 -(id)initBingo;
--(void)setURL:(NSString *)bingoURL;
+
+/*!
+ * @brief A method that retrieves important parameters for the bingo game to use.
+ * @param baseURL An NSString to be used as base URL of the bingo game.
+ * @param token An NSString token to be passed to the server.
+ * @param profileToken An NSString profile token to be passed to the server.
+ */
+-(void)setBaseURL:(NSString *)baseURL userID:(NSString *)userID token:(NSString *)token profileToken:(NSString *)profileToken;
 
 @end

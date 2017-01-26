@@ -20,7 +20,7 @@
 
 @protocol CMBScannerViewControllerDelegate
 
-- (void)scannerViewController:(CMBScannerViewController *)controller stringResult:(NSString *)qrCode;
+- (void)scannerViewController:(CMBScannerViewController *)controller stringResult:(NSString *)stringResult;
 
 @end
 
