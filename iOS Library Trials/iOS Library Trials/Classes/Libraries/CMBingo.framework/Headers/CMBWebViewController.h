@@ -25,6 +25,6 @@
  * @param token An NSString token to be passed to the server.
  * @param profileToken An NSString profile token to be passed to the server.
  */
--(void)setBaseURL:(NSString *)baseURL userID:(NSString *)userID token:(NSString *)token profileToken:(NSString *)profileToken;
+-(void)setBaseURL:(NSString *)baseURL userID:(NSString *)userID token:(NSString *)token profileToken:(NSString *)profileToken svcAuth:(NSString *)svcAuth;
 
 @end

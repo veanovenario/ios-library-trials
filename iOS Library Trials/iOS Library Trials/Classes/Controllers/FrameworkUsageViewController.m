@@ -37,15 +37,16 @@
      * Make sure the framework path is correct in Build Settings > Framework Search Paths
      */
     
-    // These will be provided by the app developers
+    // These will be provided by the CAPITASTAR app developers
     NSString *paramBaseURL = @"https://bingo.massiveinfinity.com/apiv1/Service";
     NSString *paramUserID = @"1";
     NSString *paramToken = @"sampleToken123";
     NSString *paramProfileToken = @"sampleProfileToken123";
+    NSString *paramSVCAuth = @"sampleSVCAuth123";
     
-    // CapitaMall Bingo Framework
+    // Initialize and launch CapitaMall Bingo
     CMBWebViewController *cmbVC = [[CMBWebViewController alloc] initBingo];
-    [cmbVC setBaseURL:paramBaseURL userID:paramUserID token:paramToken profileToken:paramProfileToken];
+    [cmbVC setBaseURL:paramBaseURL userID:paramUserID token:paramToken profileToken:paramProfileToken svcAuth:paramSVCAuth];
     [self.navigationController pushViewController:cmbVC animated:YES];
 }
 
