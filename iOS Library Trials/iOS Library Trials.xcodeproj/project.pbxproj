@@ -362,13 +362,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C3CEA31E07CA3100930812 /* Build configuration list for PBXNativeTarget "iOS Library Trials" */;
 			buildPhases = (
-				B8AEE4BE22AF606F9C13B18D /* 📦 Check Pods Manifest.lock */,
+				B8AEE4BE22AF606F9C13B18D /* [CP] Check Pods Manifest.lock */,
 				F7C3CE881E07CA3100930812 /* Sources */,
 				F7C3CE891E07CA3100930812 /* Frameworks */,
 				F7C3CE8A1E07CA3100930812 /* Resources */,
-				FD146A22A8F0B69F11566366 /* 📦 Embed Pods Frameworks */,
-				7EF4A27555E452F70D84462C /* 📦 Copy Pods Resources */,
+				FD146A22A8F0B69F11566366 /* [CP] Embed Pods Frameworks */,
+				7EF4A27555E452F70D84462C /* [CP] Copy Pods Resources */,
 				F7EF39291E31F8CD0045E869 /* Embed Frameworks */,
+				5B7EFF891E3AF02000D1BD04 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -435,14 +436,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EF4A27555E452F70D84462C /* 📦 Copy Pods Resources */ = {
+		5B7EFF891E3AF02000D1BD04 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 49eba340cd273cf8510137e742884b9c124f8f8e 1945b693da1f08443fbe384d8cfc598b4c71eac80c2c12df6e95ba8be4445cd5";
+		};
+		7EF4A27555E452F70D84462C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,29 +464,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8AEE4BE22AF606F9C13B18D /* 📦 Check Pods Manifest.lock */ = {
+		B8AEE4BE22AF606F9C13B18D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD146A22A8F0B69F11566366 /* 📦 Embed Pods Frameworks */ = {
+		FD146A22A8F0B69F11566366 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iOS Library Trials/iOS Library Trials.entitlements";
 				DEVELOPMENT_TEAM = TRQW64F727;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Classes/Libraries",
@@ -661,11 +676,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iOS Library Trials/iOS Library Trials.entitlements";
 				DEVELOPMENT_TEAM = TRQW64F727;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOS\\ Library\\ Trials/Classes/Libraries",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS Library Trials/iOSLibraryTrials-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=0",
+				);
 				INFOPLIST_FILE = "iOS Library Trials/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

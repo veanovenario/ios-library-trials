@@ -4,6 +4,8 @@
 target 'iOS Library Trials' do
 
 # Functionalities
+pod 'Fabric'
+pod 'Crashlytics'
 pod 'BraintreeDropIn'
 pod 'ZXingObjC', '~> 3.0'
 

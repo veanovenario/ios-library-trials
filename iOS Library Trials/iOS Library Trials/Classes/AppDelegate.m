@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    // Fabric / Crashlytics
+    [Fabric with:@[[Crashlytics class]]];
 
     // Default Settings for SVProgressHUD
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];

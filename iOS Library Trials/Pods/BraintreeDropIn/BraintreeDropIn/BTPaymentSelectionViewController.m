@@ -16,6 +16,14 @@
 #import <BraintreeCard/BraintreeCard.h>
 #endif
 
+#if __has_include("BraintreeApplePay.h")
+#define __BT_APPLE_PAY
+#import "BraintreeApplePay.h"
+#elif __has_include(<BraintreeApplePay/BraintreeApplePay.h>)
+#define __BT_APPLE_PAY
+#import <BraintreeApplePay/BraintreeApplePay.h>
+#endif
+
 #define SAVED_PAYMENT_METHODS_COLLECTION_SPACING 6
 #define SAVED_PAYMENT_METHODS_COLLECTION_WIDTH 105
 #define SAVED_PAYMENT_METHODS_COLLECTION_HEIGHT 165
@@ -36,6 +44,17 @@
 
 @implementation BTPaymentSelectionViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.paymentMethodNonces = @[];
+        self.paymentOptionsData = @[@(BTUIKPaymentOptionTypePayPal), @(BTUIKPaymentOptionTypeUnknown)];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -43,9 +62,6 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:BTUIKLocalizedString(CANCEL_ACTION) style:UIBarButtonItemStylePlain target:nil action:nil];
     self.title = BTUIKLocalizedString(SELECT_PAYMENT_LABEL);
     
-    self.paymentMethodNonces = @[];
-    self.paymentOptionsData = @[@(BTUIKPaymentOptionTypePayPal), @(BTUIKPaymentOptionTypeUnknown)];
-
     self.view.translatesAutoresizingMaskIntoConstraints = false;
     self.view.backgroundColor = [UIColor clearColor];
     
@@ -224,6 +240,10 @@
             }
             [self showLoadingScreen:NO animated:YES];
             self.stackView.hidden = NO;
+            [self.view layoutIfNeeded];
+            if (self.delegate) {
+                [self.delegate sheetHeightDidChange:self];
+            }
         }];
     }
 }
@@ -241,7 +261,7 @@
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    [self.apiClient fetchPaymentMethodNonces:NO completion:^(NSArray<BTPaymentMethodNonce *> *paymentMethodNonces, NSError *error) {
+    [self.apiClient fetchPaymentMethodNonces:YES completion:^(NSArray<BTPaymentMethodNonce *> *paymentMethodNonces, NSError *error) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
         if (error) {
@@ -293,6 +313,10 @@
     heightConstraint.priority = UILayoutPriorityDefaultHigh;
     heightConstraint.active = true;
     return spacer;
+}
+
+- (float) sheetHeight {
+    return self.paymentMethodNonces.count == 0 ? 280 : 470;
 }
 
 #pragma mark - Protocol conformance
