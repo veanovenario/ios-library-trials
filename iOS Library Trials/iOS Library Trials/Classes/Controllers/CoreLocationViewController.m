@@ -73,14 +73,13 @@
         
         _currentLocation = newLocation;
         [_locationManager stopUpdatingLocation];
-        [SVProgressHUD dismiss];
         
         if (_currentLocation) {
             self.coordinatesLabel.text = [NSString stringWithFormat:@"%f, %f",newLocation.coordinate.latitude,newLocation.coordinate.longitude];
         }
-    }else{
-        [SVProgressHUD dismiss];
     }
+    
+    [SVProgressHUD dismiss];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {

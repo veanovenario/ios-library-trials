@@ -62,5 +62,7 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location service is used to retrieve your current location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location service is used to retrieve your current location.</string>
 </dict>
 </plist>

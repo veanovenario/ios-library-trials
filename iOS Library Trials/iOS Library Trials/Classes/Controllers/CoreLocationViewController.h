@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 /* NOTE
- * Add NSLocationAlwaysUsageDescription in Info.plist for permission
+ * Add NSLocationAlwaysUsageDescription & NSLocationWhenInUseUsageDescription in Info.plist for permission
  */
 
 @interface CoreLocationViewController : UIViewController<CLLocationManagerDelegate>
