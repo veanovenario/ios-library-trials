@@ -10,7 +10,7 @@ Functionality
 • Open a WebView from a link in a webpage & call a JS function  
 • Share different data per ActivityType  
 • Display a screen from a created framework  
-• ZXing QR Code Scanner  
+• ZXing QR Code Scanner (run on device)  
 • Retrieve current location of the device  
 
 User Interface  

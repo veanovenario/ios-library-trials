@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "CMBScannerViewController.h"
 
-@interface CMBWebViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CMBScannerViewControllerDelegate>
+@interface CMBWebViewController : UIViewController <CLLocationManagerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CMBScannerViewControllerDelegate>
 
 @property (nonatomic, strong, readonly) CMBScannerViewController *scannerViewController;
 
@@ -24,6 +25,7 @@
  * @param baseURL An NSString to be used as base URL of the bingo game.
  * @param token An NSString token to be passed to the server.
  * @param profileToken An NSString profile token to be passed to the server.
+ * @param svcAuth An NSString SVC Auth to be passed to the server.
  */
 -(void)setBaseURL:(NSString *)baseURL userID:(NSString *)userID token:(NSString *)token profileToken:(NSString *)profileToken svcAuth:(NSString *)svcAuth;
 

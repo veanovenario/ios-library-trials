@@ -29,7 +29,7 @@
     [self.functionalityArray addObject:@"Open a WebView from a link in a webpage & call a JS function"];
     [self.functionalityArray addObject:@"Share different data per ActivityType"];
     [self.functionalityArray addObject:@"Display a screen from a created framework"];
-    [self.functionalityArray addObject:@"ZXing QR Code Scanner"];
+    [self.functionalityArray addObject:@"ZXing QR Code Scanner (run on device)"];
     [self.functionalityArray addObject:@"Retrieve current location of the device"];
 }
 
