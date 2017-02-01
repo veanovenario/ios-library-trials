@@ -28,6 +28,10 @@
 #define kSegueSharePerActivityType                      @"showSharePerActivityType"
 #define kSegueFrameworkUsage                            @"showFrameworkUsage"
 #define kSegueQRCodeScanner                             @"showQRCodeScanner"
+#define kSegueCoreLocation                              @"showCoreLocation"
+
+// Messages
+#define kMessageDisabledLocation                        @"Location Service is disabled.\nGo to Settings > Privacy > Location Services and allow the app to access your location."
 
 @interface Constants : NSObject
 

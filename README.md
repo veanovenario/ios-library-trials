@@ -11,5 +11,6 @@ Functionality
 • Share different data per ActivityType  
 • Display a screen from a created framework  
 • ZXing QR Code Scanner  
+• Retrieve current location of the device  
 
 User Interface  

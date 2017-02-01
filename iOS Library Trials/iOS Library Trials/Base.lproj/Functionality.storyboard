@@ -45,6 +45,7 @@
                         <segue destination="eqE-GD-LkW" kind="show" identifier="showSharePerActivityType" id="mRe-HV-AUs"/>
                         <segue destination="vPQ-nC-ZtM" kind="show" identifier="showFrameworkUsage" id="6ow-7J-dak"/>
                         <segue destination="frJ-Gw-LoQ" kind="show" identifier="showQRCodeScanner" id="pwH-jb-MI1"/>
+                        <segue destination="fK6-kO-jKw" kind="show" identifier="showCoreLocation" id="c5f-IL-oT2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQE-tz-j9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,6 +223,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLK-vM-W8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3049" y="412"/>
+        </scene>
+        <!--Core Location View Controller-->
+        <scene sceneID="3kI-ce-AFb">
+            <objects>
+                <viewController storyboardIdentifier="CoreLocationViewController" id="fK6-kO-jKw" customClass="CoreLocationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PFW-fh-1dh"/>
+                        <viewControllerLayoutGuide type="bottom" id="qaa-Ab-GEk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uU6-cX-8uE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-tS-OFE">
+                                <rect key="frame" x="50" y="309" width="275" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h3m-qi-6p3"/>
+                                </constraints>
+                                <state key="normal" title="Get Location">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLocationButtonPressed:" destination="fK6-kO-jKw" eventType="touchUpInside" id="MBT-6w-inp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-5g-ae8">
+                                <rect key="frame" x="30" y="258" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.77647058820000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lXZ-tS-OFE" secondAttribute="trailing" constant="50" id="27e-ku-ExJ"/>
+                            <constraint firstItem="lXZ-tS-OFE" firstAttribute="top" secondItem="JdI-5g-ae8" secondAttribute="bottom" constant="30" id="75o-BJ-h1R"/>
+                            <constraint firstItem="lXZ-tS-OFE" firstAttribute="centerY" secondItem="uU6-cX-8uE" secondAttribute="centerY" id="FiI-IR-8Hf"/>
+                            <constraint firstItem="JdI-5g-ae8" firstAttribute="leading" secondItem="uU6-cX-8uE" secondAttribute="leading" constant="30" id="Q9M-6N-qKn"/>
+                            <constraint firstAttribute="trailing" secondItem="JdI-5g-ae8" secondAttribute="trailing" constant="30" id="VLQ-eU-Ow4"/>
+                            <constraint firstItem="lXZ-tS-OFE" firstAttribute="leading" secondItem="uU6-cX-8uE" secondAttribute="leading" constant="50" id="dm9-Qi-Nzr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="JdI-5g-ae8" id="dh9-NQ-bUv"/>
+                        <outlet property="getLocationButton" destination="lXZ-tS-OFE" id="GQP-Lw-UsU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6b-0n-HH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5455" y="412"/>
         </scene>
         <!--Framework Usage View Controller-->
         <scene sceneID="D0N-Zc-dNA">

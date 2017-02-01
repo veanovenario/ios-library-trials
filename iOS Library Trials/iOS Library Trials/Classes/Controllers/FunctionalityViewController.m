@@ -30,6 +30,7 @@
     [self.functionalityArray addObject:@"Share different data per ActivityType"];
     [self.functionalityArray addObject:@"Display a screen from a created framework"];
     [self.functionalityArray addObject:@"ZXing QR Code Scanner"];
+    [self.functionalityArray addObject:@"Retrieve current location of the device"];
 }
 
 #pragma mark - TableView DataSource
@@ -76,6 +77,8 @@
         [self performSegueWithIdentifier:kSegueFrameworkUsage sender:nil];
     }else if (indexPath.row == 5) {
         [self performSegueWithIdentifier:kSegueQRCodeScanner sender:nil];
+    }else if (indexPath.row == 6) {
+        [self performSegueWithIdentifier:kSegueCoreLocation sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

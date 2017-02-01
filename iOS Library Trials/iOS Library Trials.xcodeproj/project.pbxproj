@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B79EAD21E418660005C1055 /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79EAD11E418660005C1055 /* CoreLocationViewController.m */; };
+		5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B79EAD31E41867F005C1055 /* CoreLocation.framework */; };
 		BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */; };
 		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
 		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
@@ -49,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Library Trials.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B79EAD01E418660005C1055 /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocationViewController.h; path = Classes/Controllers/CoreLocationViewController.h; sourceTree = "<group>"; };
+		5B79EAD11E418660005C1055 /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreLocationViewController.m; path = Classes/Controllers/CoreLocationViewController.m; sourceTree = "<group>"; };
+		5B79EAD31E41867F005C1055 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D7FEDF980A532DA2A7A0B287 /* Pods-iOS Library Trials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.release.xcconfig"; sourceTree = "<group>"; };
 		EF8DE087DD5790F6D2C15509 /* Pods-iOS Library Trials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.debug.xcconfig"; sourceTree = "<group>"; };
 		F78542681E1651AF00A80628 /* WebNativeLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebNativeLinkViewController.h; path = Classes/Controllers/WebNativeLinkViewController.h; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */,
 				F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */,
 				BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */,
 			);
@@ -109,9 +115,19 @@
 		32F7E2100292E3E9EF089EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B79EAD31E41867F005C1055 /* CoreLocation.framework */,
 				0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B79EACF1E4185D0005C1055 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5B79EAD01E418660005C1055 /* CoreLocationViewController.h */,
+				5B79EAD11E418660005C1055 /* CoreLocationViewController.m */,
+			);
+			name = CoreLocation;
 			sourceTree = "<group>";
 		};
 		E382DE6D148E07CA87A8518C /* Pods */ = {
@@ -306,6 +322,7 @@
 				F7D433F11E1E233E00A7DB2E /* SharePerActivityType */,
 				F78843EE1E262C3B00D3476F /* FrameworkUsage */,
 				F7EF39201E31BD620045E869 /* ZXingQRCodeScanner */,
+				5B79EACF1E4185D0005C1055 /* CoreLocation */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -509,6 +526,7 @@
 				F78843F41E262D0400D3476F /* FrameworkUsageViewController.m in Sources */,
 				F7D433F71E1E25DA00A7DB2E /* CustomActivityItemProvider.m in Sources */,
 				F7C3CEB81E07D01800930812 /* BaseViewController.m in Sources */,
+				5B79EAD21E418660005C1055 /* CoreLocationViewController.m in Sources */,
 				F7C3CED31E07D47000930812 /* FunctionalityViewController.m in Sources */,
 				F7C3CE911E07CA3100930812 /* main.m in Sources */,
 				F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */,
@@ -653,6 +671,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "iOS Library Trials/iOS Library Trials.entitlements";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TRQW64F727;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
