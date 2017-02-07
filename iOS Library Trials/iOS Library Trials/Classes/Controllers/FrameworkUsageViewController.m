@@ -42,11 +42,10 @@
     NSString *paramUserID = @"1";
     NSString *paramToken = @"sampleToken123";
     NSString *paramProfileToken = @"sampleProfileToken123";
-    NSString *paramSVCAuth = @"sampleSVCAuth123";
     
     // Initialize and launch CapitaMall Bingo
     CMBWebViewController *cmbVC = [[CMBWebViewController alloc] initBingo];
-    [cmbVC setBaseURL:paramBaseURL userID:paramUserID token:paramToken profileToken:paramProfileToken svcAuth:paramSVCAuth];
+    [cmbVC setBaseURL:paramBaseURL userID:paramUserID token:paramToken profileToken:paramProfileToken];
     [self.navigationController pushViewController:cmbVC animated:YES];
 }
 
