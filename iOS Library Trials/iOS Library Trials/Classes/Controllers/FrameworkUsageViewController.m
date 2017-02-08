@@ -7,6 +7,7 @@
 //
 
 #import "FrameworkUsageViewController.h"
+#import <FrameworkTrial/FTWebViewController.h>
 #import <CMBingo/CMBWebViewController.h>
 
 @interface FrameworkUsageViewController ()
@@ -18,6 +19,11 @@
 
 @implementation FrameworkUsageViewController
 
+/* NOTES:
+ * Framework should be added in General > Embedded Binaries
+ * Make sure the framework path is correct in Build Settings > Framework Search Paths
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -27,15 +33,14 @@
 }
 
 - (IBAction)button1Pressed:(id)sender {
-
+    
+    // Initialize and launch Framework Trial web
+    FTWebViewController *webVC = [[FTWebViewController alloc] initWeb];
+    [webVC setBaseURL:@"http://google.com"];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (IBAction)button2Pressed:(id)sender {
-    
-    /* NOTES:
-     * Framework should be added in General > Embedded Binaries
-     * Make sure the framework path is correct in Build Settings > Framework Search Paths
-     */
     
     // These will be provided by the CAPITASTAR app developers
     NSString *paramBaseURL = @"https://bingo.massiveinfinity.com/apiv1/Service";

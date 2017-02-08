@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B79EAD21E418660005C1055 /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79EAD11E418660005C1055 /* CoreLocationViewController.m */; };
 		5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B79EAD31E41867F005C1055 /* CoreLocation.framework */; };
+		5BE4AEC41E49BD200067F257 /* FrameworkTrial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE4AEC01E49BD0A0067F257 /* FrameworkTrial.framework */; };
+		5BE4AEC51E49BD200067F257 /* FrameworkTrial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE4AEC01E49BD0A0067F257 /* FrameworkTrial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */; };
 		F785426A1E1651AF00A80628 /* WebNativeLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78542691E1651AF00A80628 /* WebNativeLinkViewController.m */; };
 		F785426D1E16536900A80628 /* WebpageNativeLink.html in Resources */ = {isa = PBXBuildFile; fileRef = F785426C1E16536900A80628 /* WebpageNativeLink.html */; };
@@ -42,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5BE4AEC51E49BD200067F257 /* FrameworkTrial.framework in Embed Frameworks */,
 				F7EF39281E31F8CD0045E869 /* CMBingo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -54,6 +57,7 @@
 		5B79EAD01E418660005C1055 /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocationViewController.h; path = Classes/Controllers/CoreLocationViewController.h; sourceTree = "<group>"; };
 		5B79EAD11E418660005C1055 /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreLocationViewController.m; path = Classes/Controllers/CoreLocationViewController.m; sourceTree = "<group>"; };
 		5B79EAD31E41867F005C1055 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5BE4AEC01E49BD0A0067F257 /* FrameworkTrial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FrameworkTrial.framework; path = Classes/Libraries/FrameworkTrial.framework; sourceTree = "<group>"; };
 		D7FEDF980A532DA2A7A0B287 /* Pods-iOS Library Trials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.release.xcconfig"; sourceTree = "<group>"; };
 		EF8DE087DD5790F6D2C15509 /* Pods-iOS Library Trials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Library Trials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials.debug.xcconfig"; sourceTree = "<group>"; };
 		F78542681E1651AF00A80628 /* WebNativeLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebNativeLinkViewController.h; path = Classes/Controllers/WebNativeLinkViewController.h; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			files = (
 				5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */,
 				F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */,
+				5BE4AEC41E49BD200067F257 /* FrameworkTrial.framework in Frameworks */,
 				BBE676AD80C50DBB09DEF06C /* libPods-iOS Library Trials.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */,
+				5BE4AEC01E49BD0A0067F257 /* FrameworkTrial.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";

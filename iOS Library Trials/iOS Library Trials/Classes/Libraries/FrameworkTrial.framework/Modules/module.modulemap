@@ -1,0 +1,6 @@
+framework module FrameworkTrial {
+  umbrella header "FrameworkTrial.h"
+
+  export *
+  module * { export * }
+}

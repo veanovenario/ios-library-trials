@@ -293,7 +293,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gHu-xu-XSL"/>
                                 </constraints>
-                                <state key="normal" title="Framework 1">
+                                <state key="normal" title="FrameworkTrial Library">
                                     <color key="titleColor" red="0.062745098040000002" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -306,7 +306,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="k4m-0w-2nJ"/>
                                 </constraints>
-                                <state key="normal" title="Scan QR and Share with FB">
+                                <state key="normal" title="CMBingo Library">
                                     <color key="titleColor" red="0.062745098040000002" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
