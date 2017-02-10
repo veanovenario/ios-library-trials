@@ -29,6 +29,7 @@
 #define kSegueFrameworkUsage                            @"showFrameworkUsage"
 #define kSegueQRCodeScanner                             @"showQRCodeScanner"
 #define kSegueCoreLocation                              @"showCoreLocation"
+#define kSegueAPITest                                   @"showAPITest"
 
 // Messages
 #define kMessageDisabledLocation                        @"Location Service is disabled.\nGo to Settings > Privacy > Location Services and allow the app to access your location."

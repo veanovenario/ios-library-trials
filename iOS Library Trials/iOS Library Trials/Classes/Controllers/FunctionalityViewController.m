@@ -31,6 +31,7 @@
     [self.functionalityArray addObject:@"Display a screen from a created framework"];
     [self.functionalityArray addObject:@"ZXing QR Code Scanner (run on device)"];
     [self.functionalityArray addObject:@"Retrieve current location of the device"];
+    [self.functionalityArray addObject:@"Test APIs"];
 }
 
 #pragma mark - TableView DataSource
@@ -79,6 +80,8 @@
         [self performSegueWithIdentifier:kSegueQRCodeScanner sender:nil];
     }else if (indexPath.row == 6) {
         [self performSegueWithIdentifier:kSegueCoreLocation sender:nil];
+    }else if (indexPath.row == 7) {
+        [self performSegueWithIdentifier:kSegueAPITest sender:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0CE2011E4DA8F80069055F /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0CE2001E4DA8F80069055F /* APIHelper.m */; };
+		5B0CE2041E4DAD240069055F /* APITestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0CE2031E4DAD240069055F /* APITestViewController.m */; };
 		5B79EAD21E418660005C1055 /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79EAD11E418660005C1055 /* CoreLocationViewController.m */; };
 		5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B79EAD31E41867F005C1055 /* CoreLocation.framework */; };
 		5BE4AEC41E49BD200067F257 /* FrameworkTrial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE4AEC01E49BD0A0067F257 /* FrameworkTrial.framework */; };
@@ -54,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Library Trials.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0CE1FF1E4DA8F80069055F /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIHelper.h; path = Classes/Helpers/APIHelper.h; sourceTree = "<group>"; };
+		5B0CE2001E4DA8F80069055F /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIHelper.m; path = Classes/Helpers/APIHelper.m; sourceTree = "<group>"; };
+		5B0CE2021E4DAD240069055F /* APITestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = APITestViewController.h; path = Classes/Controllers/APITestViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B0CE2031E4DAD240069055F /* APITestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = APITestViewController.m; path = Classes/Controllers/APITestViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B79EAD01E418660005C1055 /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocationViewController.h; path = Classes/Controllers/CoreLocationViewController.h; sourceTree = "<group>"; };
 		5B79EAD11E418660005C1055 /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreLocationViewController.m; path = Classes/Controllers/CoreLocationViewController.m; sourceTree = "<group>"; };
 		5B79EAD31E41867F005C1055 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -124,6 +130,15 @@
 				0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B0CE1FE1E4DA88C0069055F /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				5B0CE2021E4DAD240069055F /* APITestViewController.h */,
+				5B0CE2031E4DAD240069055F /* APITestViewController.m */,
+			);
+			name = WebServices;
 			sourceTree = "<group>";
 		};
 		5B79EACF1E4185D0005C1055 /* CoreLocation */ = {
@@ -244,6 +259,8 @@
 				F7C3CEC01E07D0F500930812 /* GlobalVariables.m */,
 				F7C3CEC21E07D12600930812 /* Utils.h */,
 				F7C3CEC31E07D12600930812 /* Utils.m */,
+				5B0CE1FF1E4DA8F80069055F /* APIHelper.h */,
+				5B0CE2001E4DA8F80069055F /* APIHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -329,6 +346,7 @@
 				F78843EE1E262C3B00D3476F /* FrameworkUsage */,
 				F7EF39201E31BD620045E869 /* ZXingQRCodeScanner */,
 				5B79EACF1E4185D0005C1055 /* CoreLocation */,
+				5B0CE1FE1E4DA88C0069055F /* WebServices */,
 			);
 			name = Functionality;
 			sourceTree = "<group>";
@@ -535,7 +553,9 @@
 				5B79EAD21E418660005C1055 /* CoreLocationViewController.m in Sources */,
 				F7C3CED31E07D47000930812 /* FunctionalityViewController.m in Sources */,
 				F7C3CE911E07CA3100930812 /* main.m in Sources */,
+				5B0CE2011E4DA8F80069055F /* APIHelper.m in Sources */,
 				F7D433FA1E1E25F100A7DB2E /* SharePerActivityViewController.m in Sources */,
+				5B0CE2041E4DAD240069055F /* APITestViewController.m in Sources */,
 				F7C3CEC41E07D12600930812 /* Utils.m in Sources */,
 				F7C3CEBB1E07D05800930812 /* HomeViewController.m in Sources */,
 				F7EF39231E31BF100045E869 /* ZXingQRCodeScannerViewController.m in Sources */,
