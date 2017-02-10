@@ -64,5 +64,8 @@
 	<string>Location service is used to retrieve your current location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location service is used to retrieve your current location.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Camera is used to scan QR codes and take photos.</string>
+    
 </dict>
 </plist>
