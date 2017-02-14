@@ -66,7 +66,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        NSString *webviewURL = @"http://google.com";
+        NSString *webviewURL = @"http://bingo.massiveinfinity.com/apiv1/Service/serve_bingo_board_dev?user_id=jian&token=test&profileToken=test&scvAuth=test";
         [self performSegueWithIdentifier:kSegueWebView sender:webviewURL];
     }else if (indexPath.row == 1) {
         [self performSegueWithIdentifier:kSegueBraintree sender:nil];

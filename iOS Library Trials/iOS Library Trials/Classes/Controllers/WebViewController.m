@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Auto-play videos
+    [self.webView setAllowsInlineMediaPlayback:YES];
+    self.webView.mediaPlaybackRequiresUserAction = NO;
+        
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     
     if ([self.url length] > 0) {
