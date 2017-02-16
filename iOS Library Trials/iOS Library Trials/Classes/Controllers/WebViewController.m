@@ -22,7 +22,11 @@
     // Auto-play videos
     [self.webView setAllowsInlineMediaPlayback:YES];
     self.webView.mediaPlaybackRequiresUserAction = NO;
-        
+    
+    // Disable scrolling
+//    self.webView.scrollView.scrollEnabled = NO;
+//    self.webView.scrollView.bounces = NO;
+
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     
     if ([self.url length] > 0) {
