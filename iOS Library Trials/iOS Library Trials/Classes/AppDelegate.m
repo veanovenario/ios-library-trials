@@ -23,8 +23,12 @@
     [Fabric with:@[[Crashlytics class]]];
 
     // Default Settings for SVProgressHUD
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+//    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+//    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+//    
+    // Default Settings for SVProgressHUD
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
     return YES;
 }

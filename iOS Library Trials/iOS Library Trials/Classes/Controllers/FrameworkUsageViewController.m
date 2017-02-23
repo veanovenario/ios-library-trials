@@ -41,12 +41,12 @@
 }
 
 - (IBAction)button2Pressed:(id)sender {
-    
     // These will be provided by the CAPITASTAR app developers
-    NSString *paramBaseURL = @"https://bingo.massiveinfinity.com/apiv1/Service";
+    //NSString *paramBaseURL = @"https://bingo.massiveinfinity.com/apiv1/Service";
+    NSString *paramBaseURL = @"https://game-uat.capitastar.com/apiv1/service";
     NSString *paramUserID = @"1";
-    NSString *paramToken = @"sampleToken123";
-    NSString *paramProfileToken = @"sampleProfileToken123";
+    NSString *paramToken = @"test";
+    NSString *paramProfileToken = @"test";
     
     // Initialize and launch CapitaMall Bingo
     CMBWebViewController *cmbVC = [[CMBWebViewController alloc] initBingo];

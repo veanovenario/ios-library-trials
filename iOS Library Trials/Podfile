@@ -12,5 +12,6 @@ pod 'AFNetworking'
 
 # User Interface
 pod 'SVProgressHUD'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 end

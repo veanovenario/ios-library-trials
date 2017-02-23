@@ -37,6 +37,7 @@
 		F7EF39231E31BF100045E869 /* ZXingQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */; };
 		F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; };
 		F7EF39281E31F8CD0045E869 /* CMBingo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A8E1601E2E0C250031F9E2 /* CMBingo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7F37A381E5EA29200056135 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F37A371E5EA29200056135 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +107,7 @@
 		F7D433F91E1E25F100A7DB2E /* SharePerActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharePerActivityViewController.m; path = Classes/Controllers/SharePerActivityViewController.m; sourceTree = "<group>"; };
 		F7EF39211E31BF100045E869 /* ZXingQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZXingQRCodeScannerViewController.h; path = Classes/Controllers/ZXingQRCodeScannerViewController.h; sourceTree = "<group>"; };
 		F7EF39221E31BF100045E869 /* ZXingQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZXingQRCodeScannerViewController.m; path = Classes/Controllers/ZXingQRCodeScannerViewController.m; sourceTree = "<group>"; };
+		F7F37A371E5EA29200056135 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F37A381E5EA29200056135 /* WebKit.framework in Frameworks */,
 				5B79EAD41E41867F005C1055 /* CoreLocation.framework in Frameworks */,
 				F7EF39271E31F8CD0045E869 /* CMBingo.framework in Frameworks */,
 				5BE4AEC41E49BD200067F257 /* FrameworkTrial.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		32F7E2100292E3E9EF089EBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7F37A371E5EA29200056135 /* WebKit.framework */,
 				5B79EAD31E41867F005C1055 /* CoreLocation.framework */,
 				0D8689C77D838177BAAF5BF4 /* libPods-iOS Library Trials.a */,
 			);
@@ -403,6 +407,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7C3CEA31E07CA3100930812 /* Build configuration list for PBXNativeTarget "iOS Library Trials" */;
 			buildPhases = (
+				8253A58B97EC6FF1D97CAAE6 /* 📦 Check Pods Manifest.lock */,
 				B8AEE4BE22AF606F9C13B18D /* [CP] Check Pods Manifest.lock */,
 				F7C3CE881E07CA3100930812 /* Sources */,
 				F7C3CE891E07CA3100930812 /* Frameworks */,
@@ -411,6 +416,8 @@
 				7EF4A27555E452F70D84462C /* [CP] Copy Pods Resources */,
 				F7EF39291E31F8CD0045E869 /* Embed Frameworks */,
 				5B7EFF891E3AF02000D1BD04 /* ShellScript */,
+				B236054D007AA899B4A15A24 /* 📦 Embed Pods Frameworks */,
+				EC93F336BDA93A0ED5C8C69F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,6 +512,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8253A58B97EC6FF1D97CAAE6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B236054D007AA899B4A15A24 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8AEE4BE22AF606F9C13B18D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +555,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC93F336BDA93A0ED5C8C69F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS Library Trials/Pods-iOS Library Trials-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD146A22A8F0B69F11566366 /* [CP] Embed Pods Frameworks */ = {

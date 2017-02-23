@@ -14,5 +14,6 @@
 #import "Utils.h"
 #import "GlobalVariables.h"
 #import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
 
 #endif
