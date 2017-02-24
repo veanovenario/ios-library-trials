@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     // Auto-play videos
-//    [self.webView setAllowsInlineMediaPlayback:YES];
+//    [self.webView setAllowsInlineMediaPlayback:NO]; // with bar
+//    [self.webView setAllowsInlineMediaPlayback:YES]; // w/o bar
 //    self.webView.mediaPlaybackRequiresUserAction = NO;
     
     // Disable scrolling
@@ -29,18 +30,18 @@
 
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     
-//    if ([self.url length] > 0) {
-//        
-//        [[self webView] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
-//    }
+    // UIWebView
+    if ([self.url length] > 0) {
+        [[self webView] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    }
 
     // WebKit Trial
-    WKWebView *wkView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.webView.frame.size.width, self.webView.frame.size.height)];
-    wkView.navigationDelegate = self;
-    wkView.configuration.allowsInlineMediaPlayback = YES;
-    wkView.configuration.requiresUserActionForMediaPlayback = NO; //deprecated in iOS9 mediaPlaybackRequiresUserAction
-    [wkView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
-    [self.view addSubview:wkView];
+//    WKWebView *wkView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.webView.frame.size.width, self.webView.frame.size.height)];
+//    wkView.navigationDelegate = self;
+//    wkView.configuration.allowsInlineMediaPlayback = YES;
+//    wkView.configuration.requiresUserActionForMediaPlayback = NO; //deprecated in iOS9 mediaPlaybackRequiresUserAction
+//    [wkView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+//    [self.view addSubview:wkView];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -55,7 +56,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - WebKit
+#pragma mark - WebKit Delegate
 
 
 
@@ -63,7 +64,7 @@
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-//    [SVProgressHUD show];
+    //[SVProgressHUD show];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     return YES;
@@ -71,7 +72,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)paramwebView {
     
-//    [SVProgressHUD dismiss];
+    //[SVProgressHUD dismiss];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
